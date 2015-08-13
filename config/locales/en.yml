@@ -20,4 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  new doc: "+ new doc"
+  all doc: "all docs"
+  your docs: "your docs"
+  no docs: "Can't find any docs here :("

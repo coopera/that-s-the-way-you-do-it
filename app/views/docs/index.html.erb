@@ -1,25 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Docs</h1>
+<h1>Docs</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @docs.each do |doc| %>
-      <tr>
-        <td><%= link_to 'Show', doc %></td>
-        <td><%= link_to 'Edit', edit_doc_path(doc) %></td>
-        <td><%= link_to 'Destroy', doc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= link_to t('all docs'), docs_path %>
+<%= link_to t('your docs'), docs_path %>
+<%= link_to t('new doc'), new_doc_path %>
 
 <br>
+<br>
 
-<%= link_to 'New Doc', new_doc_path %>
+<% unless @docs.empty? %>
+  <% @docs.each do |doc| %>
+    <h2><%= link_to doc.title, doc%></h2>
+    <div class="small_info">
+      <%= doc.updated_at %>
+    </div>
+    <p>
+      <%= doc.description%>
+    </p>
+  <% end %>
+<% else %>
+  <%= t('no docs')%>
+<% end %>
