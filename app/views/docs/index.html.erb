@@ -13,7 +13,7 @@
   <% @docs.each do |doc| %>
     <h2><%= link_to doc.title, doc%></h2>
     <div class="small_info">
-      <%= doc.updated_at %>
+      <%= t('updated at') + " " + l(doc.updated_at, format: :short) %>
     </div>
     <p>
       <%= doc.description%>
