@@ -30,6 +30,7 @@ body{
 
 a:link {
     color: #838282;
+   text-decoration: none;
 }
 
 /* visited link */
