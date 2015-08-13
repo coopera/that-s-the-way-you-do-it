@@ -2,17 +2,14 @@
 
 <h1>Docs</h1>
 
-<%= link_to t('all docs'), docs_path %>
-<%= link_to t('your docs'), docs_path %>
-<%= link_to t('new doc'), new_doc_path %>
-
+<%= render "utils/menu"%>
 <br>
 <br>
 
 <% unless @docs.empty? %>
   <% @docs.each do |doc| %>
     <h2><%= link_to doc.title, doc%></h2>
-    <div class="small_info">
+    <div class="small faded">
       <%= t('updated at') + " " + l(doc.updated_at, format: :short) %>
     </div>
     <p>

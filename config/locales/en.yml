@@ -25,6 +25,7 @@ en:
   your docs: "your docs"
   no docs: "Can't find any docs here :("
   updated at: "updated at"
+  edit doc: "EDIT THIS DOC"
   date:
     abbr_day_names:
     - Sun

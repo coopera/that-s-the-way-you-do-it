@@ -19,3 +19,11 @@ body{
   font-weight: lighter;
   color: #595959;
 }
+
+.faded{
+  color: #a4a4a4;
+}
+
+.small{
+  font-size: .8em;
+}

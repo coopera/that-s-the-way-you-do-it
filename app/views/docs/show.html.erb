@@ -1,4 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_doc_path(@doc) %> |
-<%= link_to 'Back', docs_path %>
+<%= render "utils/menu"%>
+<h1> <%= @doc.title %> </h1>
+<div class="faded">
+  <%= t('created at') + " " + l(@doc.created_at, format: :short) %>
+  ,
+  <%= t('updated at') + " " + l(@doc.updated_at, format: :short) %>
+</div>
+<p>
+  <%= @doc.description %>
+</p>
+
+<hr>
+
+<p>
+  <%= @doc.implementation %>
+</p>
+
+<hr>
+
+<%= link_to t('edit doc'), edit_doc_path(@doc) %>
