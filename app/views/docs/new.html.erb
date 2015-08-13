@@ -1,5 +1,9 @@
-<h1>New Doc</h1>
+<h1>
+  <%= t('new doc title') %>
+</h1>
+
+<%= render('utils/menu') %>
+
+<%= link_to t('cancel'), docs_path %>
 
 <%= render 'form' %>
-
-<%= link_to 'Back', docs_path %>

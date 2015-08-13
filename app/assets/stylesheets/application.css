@@ -27,3 +27,12 @@ body{
 .small{
   font-size: .8em;
 }
+
+a:link {
+    color: #838282;
+}
+
+/* visited link */
+a:visited {
+    color: #838282;
+}
