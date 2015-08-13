@@ -1,6 +1,7 @@
-<h1>Editing Doc</h1>
+<h1>
+  <%= t('edit doc title') %>
+</h1>
+
+<%= render('utils/menu') %>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @doc %> |
-<%= link_to 'Back', docs_path %>

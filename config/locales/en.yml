@@ -1,13 +1,15 @@
 en:
   new doc: "+ new doc"
-  new doc tile: "New doc"
+  new doc title: "New doc"
+  edit doc title: "Editing doc"
+  doc index title: "Docs"
   all doc: "all docs"
   your docs: "your docs"
   no docs: "Can't find any docs here :("
   updated at: "updated at"
   edit doc: "EDIT THIS DOC"
   cancel: "cancel"
-  create doc: "CREATE DOC"
+  submit doc: "SUBMIT DOC"
   date:
     abbr_day_names:
     - Sun
