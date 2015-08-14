@@ -20,11 +20,21 @@ document.addEventListener("DOMContentLoaded", function () {
   var doc_implementation = document.getElementById('doc_implementation');
 
   doc_implementation.onpaste = function(e) {
-    var pastedText = undefined;
-    if (window.clipboardData && window.clipboardData.getData) { // to work on IE
-      pastedText = window.clipboardData.getData('Text');
-    } else if (e.clipboardData && e.clipboardData.getData) {
-      pastedText = e.clipboardData.getData('text/plain');
+    var pastedText = getPastedContent(e);
+
+    if(pastedText.search("github.com/") != -1){
+      file = getApiUrl(pastedText);
+
+      content =
+   Base64.decode(JSON.parse(httpGet(file))["content"]);
+
+      doc_implementation.value += pastedText + "\n\n" + content;
+
+      e.preventDefault();
     }
   };
 });
+
+//transforms this https://github.com/IgorMarques/that-s-the-way-you-do-it/blob/master/app/models/doc.rb
+
+//into this https://api.github.com/repos/IgorMarques/that-s-the-way-you-do-it/contents/app/models/doc.rb
