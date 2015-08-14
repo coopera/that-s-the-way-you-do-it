@@ -37,3 +37,13 @@ a:link {
 a:visited {
     color: #838282;
 }
+
+.implementation_area{
+  height: 500px;
+  width: 50%;
+}
+
+.description_area{
+  height: 100px;
+  width: 50%;
+}
