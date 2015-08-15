@@ -23,8 +23,7 @@ class DocsController < ApplicationController
         format.html { redirect_to @doc, notice: 'Doc was successfully created.' }
         format.json { render :show, status: :created, location: @doc }
       else
-        format.html { render :new }
-        format.json { render json: @doc.errors, status: :unprocessable_entity }
+        respond_with_unprocessable_entity(format, :new)
       end
     end
   end
@@ -35,8 +34,7 @@ class DocsController < ApplicationController
         format.html { redirect_to @doc, notice: 'Doc was successfully updated.' }
         format.json { render :show, status: :ok, location: @doc }
       else
-        format.html { render :edit }
-        format.json { render json: @doc.errors, status: :unprocessable_entity }
+        respond_with_unprocessable_entity(format, :edit)
       end
     end
   end
@@ -50,6 +48,11 @@ class DocsController < ApplicationController
   end
 
   private
+
+    def respond_with_unprocessable_entity(format, view)
+      format.html { render view }
+      format.json { render json: @doc.errors, status: :unprocessable_entity }
+    end
 
     def set_doc
       @doc = Doc.find(params[:id])
