@@ -20,8 +20,7 @@ class DocsController < ApplicationController
 
     respond_to do |format|
       if @doc.save
-        format.html { redirect_to @doc, notice: 'Doc was successfully created.' }
-        format.json { render :show, status: :created, location: @doc }
+        respond_with_success(format, 'Doc was successfully created.')
       else
         respond_with_unprocessable_entity(format, :new)
       end
@@ -31,8 +30,7 @@ class DocsController < ApplicationController
   def update
     respond_to do |format|
       if @doc.update(doc_params)
-        format.html { redirect_to @doc, notice: 'Doc was successfully updated.' }
-        format.json { render :show, status: :ok, location: @doc }
+        respond_with_success(format, 'Doc was successfully updated.')
       else
         respond_with_unprocessable_entity(format, :edit)
       end
@@ -48,6 +46,11 @@ class DocsController < ApplicationController
   end
 
   private
+
+    def respond_with_success(format, message)
+      format.html { redirect_to @doc, notice: message}
+      format.json { render :show, status: :created, location: @doc }
+    end
 
     def respond_with_unprocessable_entity(format, view)
       format.html { render view }
