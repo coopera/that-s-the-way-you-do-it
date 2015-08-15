@@ -10,6 +10,9 @@ en:
   edit doc: "EDIT THIS DOC"
   cancel: "cancel"
   submit doc: "SUBMIT DOC"
+  doc_created_success: "Doc was successfully created."
+  doc_updated_success: "Doc was successfully updated."
+  doc_deleted_success: "Doc was successfully destroyed."
   date:
     abbr_day_names:
     - Sun

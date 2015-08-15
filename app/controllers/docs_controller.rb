@@ -20,7 +20,7 @@ class DocsController < ApplicationController
 
     respond_to do |format|
       if @doc.save
-        respond_with_success(format, 'Doc was successfully created.')
+        respond_with_success(format, t('doc_created_success'))
       else
         respond_with_unprocessable_entity(format, :new)
       end
@@ -30,7 +30,7 @@ class DocsController < ApplicationController
   def update
     respond_to do |format|
       if @doc.update(doc_params)
-        respond_with_success(format, 'Doc was successfully updated.')
+        respond_with_success(format, t('doc_updated_success'))
       else
         respond_with_unprocessable_entity(format, :edit)
       end
@@ -40,7 +40,7 @@ class DocsController < ApplicationController
   def destroy
     @doc.destroy
     respond_to do |format|
-      format.html { redirect_to docs_url, notice: 'Doc was successfully destroyed.' }
+      format.html { redirect_to docs_url, notice: t('doc_deleted_success') }
       format.json { head :no_content }
     end
   end
