@@ -34,12 +34,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
       file = getApiUrl(pastedText);
 
-      content =
-   Base64.decode(JSON.parse(httpGet(file))["content"]);
+      content = Base64.decode(JSON.parse(httpGet(file))["content"]);
 
-      content = getAppropriateLines(content, index, finalIndex);
+      var code = getAppropriateLines(content, index, finalIndex);
 
-      doc_implementation.value += pastedText + "\n\n" + content;
+      doc_implementation.value += pastedText + "\n\n" + code;
 
       e.preventDefault();
     }
