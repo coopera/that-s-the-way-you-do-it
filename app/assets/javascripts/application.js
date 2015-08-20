@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
   doc_implementation.onpaste = function(e) {
     var pastedText = getPastedContent(e);
 
-
     if(pastedText.search("github.com/") != -1){
 
       var index = -1;
@@ -38,16 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
       content =
    Base64.decode(JSON.parse(httpGet(file))["content"]);
 
-      if(index != -1){
-        console.log(index);
-        console.log(finalIndex);
-
-        var lines = content.split("\n");
-        content = "";
-        for (var i = index; i <= finalIndex; i++) {
-          content += lines[i-1] + "\n";
-        }
-      }
+      content = getAppropriateLines(content, index, finalIndex);
 
       doc_implementation.value += pastedText + "\n\n" + content;
 
@@ -60,6 +50,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //into this https://api.github.com/repos/IgorMarques/that-s-the-way-you-do-it/contents/app/models/doc.rb
 
-//if its a line link, gets only the line
+//if it's a line link, gets only the line
 
 // https://github.com/IgorMarques/that-s-the-way-you-do-it/blob/master/app/models/doc.rb#L2-L4
+
+//if it's a multiple line link, gets all lines
+
+//https://github.com/IgorMarques/that-s-the-way-you-do-it/blob/master/app/models/doc.rb#L2-L4
