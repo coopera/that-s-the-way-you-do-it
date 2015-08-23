@@ -26,12 +26,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
       var index = -1;
       var finalIndex;
-      var lang = "ruby"
-      var markupText = "```"
+      var lang = "ruby";
+      var markupText = "```";
+
+      var fileName = pastedLink.split("#")[0];
+
+      var lang = langs[getExtension.exec(fileName)[1]] || lang
 
       if(pastedLink.search("#L") != -1){
         index = parseInt(pastedLink.split("#L")[1]);
-        finalIndex = pastedLink[pastedLink.length-1];
+        finalIndex = pastedLink.split("#L")[1].split("-L")[1];
       }
 
       file = getApiUrl(pastedLink);
