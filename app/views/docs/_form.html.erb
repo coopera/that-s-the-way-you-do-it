@@ -22,7 +22,6 @@
   <%= f.label :implementation %><br>
   <%= f.text_area :implementation, class: "implementation_area" %><br>
 
-  <%= @doc.tag_list %>
   <%= f.label :tags %><br>
   <%= f.text_field :tag_list, value: @doc.tag_list.to_s%>
 
