@@ -23,7 +23,7 @@
   <%= f.text_area :implementation, class: "implementation_area" %><br>
 
   <%= f.label :tags %><br>
-  <%= f.text_field :tag_list, value: @doc.tag_list.to_s%>
+  <%= f.text_field :tag_list, value: @doc.tag_list.to_s, class: "tag_list"%>
 
   <div class="actions">
     <%= f.submit t('submit doc')%>
