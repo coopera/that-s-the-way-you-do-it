@@ -17,6 +17,11 @@
   <%= markdown @doc.implementation %>
 </p>
 
+<strong>Tags</strong>
+<p>
+  <%= @doc.tag_list %>
+</p>
+
 <hr>
 
 <%= link_to t('edit doc'), edit_doc_path(@doc) %>
