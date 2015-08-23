@@ -34,6 +34,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # markdown renderer
 gem 'redcarpet'
+# gem 'github-markdown'
 
 group :development, :test do
 
