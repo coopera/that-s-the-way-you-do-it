@@ -3,5 +3,5 @@ class Doc < ActiveRecord::Base
 
   validates :title, length: { minimum: 5 }
 
-  acts_as_taggable_on :tags
+  acts_as_ordered_taggable
 end
