@@ -38,6 +38,8 @@ gem 'redcarpet'
 #syntax highlighting
 gem 'coderay'
 
+gem 'acts-as-taggable-on'
+
 group :development, :test do
 
   gem 'sqlite3'
