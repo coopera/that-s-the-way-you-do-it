@@ -20,27 +20,27 @@ document.addEventListener("DOMContentLoaded", function () {
   var doc_implementation = document.getElementById('doc_implementation');
 
   doc_implementation.onpaste = function(e) {
-    var pastedText = getPastedContent(e);
+    var pastedLink = getPastedContent(e);
 
-    if(pastedText.search("github.com/") != -1){
+    if(pastedLink.search("github.com/") != -1){
 
       var index = -1;
       var finalIndex;
       var lang = "ruby"
       var markupText = "```"
 
-      if(pastedText.search("#L") != -1){
-        index = parseInt(pastedText.split("#L")[1]);
-        finalIndex = pastedText[pastedText.length-1];
+      if(pastedLink.search("#L") != -1){
+        index = parseInt(pastedLink.split("#L")[1]);
+        finalIndex = pastedLink[pastedLink.length-1];
       }
 
-      file = getApiUrl(pastedText);
+      file = getApiUrl(pastedLink);
 
       content = Base64.decode(JSON.parse(httpGet(file))["content"]);
 
       var code = getAppropriateLines(content, index, finalIndex);
 
-      doc_implementation.value += pastedText + "\n\n" + markupText + lang + "\n" + code + markupText;
+      doc_implementation.value += pastedLink + "\n\n" + markupText + lang + "\n" + code + markupText;
 
       e.preventDefault();
     }
