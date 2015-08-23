@@ -1,0 +1,14 @@
+<div class="nested-fields">
+  <div class="field f_25">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "fill_witdh" %>
+  </div>
+  <div class="field f_25">
+    <%= f.label :link %>
+    <%= f.text_field :link, class: "fill_witdh"%>
+  </div>
+  <%= link_to_remove_association t(:remove_link), f %>
+
+  <br>
+  <br>
+</div>

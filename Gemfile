@@ -40,6 +40,9 @@ gem 'coderay'
 
 gem 'acts-as-taggable-on'
 
+#nested forms
+gem "cocoon"
+
 group :development, :test do
 
   gem 'sqlite3'
