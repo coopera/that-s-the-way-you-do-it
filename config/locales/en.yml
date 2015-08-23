@@ -13,6 +13,8 @@ en:
   doc_created_success: "Doc was successfully created."
   doc_updated_success: "Doc was successfully updated."
   doc_deleted_success: "Doc was successfully destroyed."
+  add_link: "add related link"
+  remove_link: "delete this link"
   date:
     abbr_day_names:
     - Sun
