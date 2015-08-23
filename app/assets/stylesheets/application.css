@@ -53,8 +53,9 @@ a:visited {
 }
 
 .f_25{
-  width: 25%;
-  display: block;
+  width: 20%;
+  display: inline-block ;
+  margin-right: 1%;
 }
 
 .fill_witdh{
