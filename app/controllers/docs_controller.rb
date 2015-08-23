@@ -62,6 +62,6 @@ class DocsController < ApplicationController
     end
 
     def doc_params
-      params[:doc].permit(:title, :description, :implementation)
+      params[:doc].permit(:title, :description, :implementation, :tag_list)
     end
 end
