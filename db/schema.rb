@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150823205140) do
+ActiveRecord::Schema.define(version: 20150823214313) do
 
   create_table "docs", force: :cascade do |t|
     t.string   "title"
@@ -20,6 +20,16 @@ ActiveRecord::Schema.define(version: 20150823205140) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
+
+  create_table "related_links", force: :cascade do |t|
+    t.string   "link"
+    t.string   "title"
+    t.integer  "doc_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "related_links", ["doc_id"], name: "index_related_links_on_doc_id"
 
   create_table "taggings", force: :cascade do |t|
     t.integer  "tag_id"
