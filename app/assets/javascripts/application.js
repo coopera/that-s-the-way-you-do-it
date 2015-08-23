@@ -26,6 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       var index = -1;
       var finalIndex;
+      var lang = "ruby"
+      var markupText = "```"
 
       if(pastedText.search("#L") != -1){
         index = parseInt(pastedText.split("#L")[1]);
@@ -38,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       var code = getAppropriateLines(content, index, finalIndex);
 
-      doc_implementation.value += pastedText + "\n\n" + code;
+      doc_implementation.value += pastedText + "\n\n" + markupText + lang + "\n" + code + markupText;
 
       e.preventDefault();
     }
