@@ -20,37 +20,35 @@
 document.addEventListener("DOMContentLoaded", function () {
   var doc_implementation = document.getElementById('doc_implementation');
 
-  doc_implementation.onpaste = function(e) {
-    var pastedLink = getPastedContent(e);
+  if(doc_implementation){
+    doc_implementation.onpaste = function(e) {
+      var pastedLink = getPastedContent(e);
 
-    if(pastedLink.search("github.com/") != -1){
+      lang = "ruby";
+      markupText = "```";
 
-      var index = -1;
-      var finalIndex;
-      var lang = "ruby";
-      var markupText = "```";
+      if(pastedLink.search("github.com/") != -1 && pastedLink.search("api.github.com/") == -1){
 
-      var fileName = pastedLink.split("#")[0];
+        var text;
 
-      var lang = langs[getExtension.exec(fileName)[1]] || lang
+        if (pastedLink.search("commit/") != -1) {
+          text = parseCommitUrl(pastedLink);
+        }
+        else{
+          text = parseFileUrl(pastedLink);
+        }
 
-      if(pastedLink.search("#L") != -1){
-        index = parseInt(pastedLink.split("#L")[1]);
-        finalIndex = pastedLink.split("#L")[1].split("-L")[1];
+        doc_implementation.value +=  text;
+
+        e.preventDefault();
       }
-
-      file = getApiUrl(pastedLink);
-
-      content = Base64.decode(JSON.parse(httpGet(file))["content"]);
-
-      var code = getAppropriateLines(content, index, finalIndex);
-
-      doc_implementation.value += pastedLink + "\n\n" + markupText + lang + "\n" + code + markupText;
-
-      e.preventDefault();
-    }
-  };
+    };
+  }
 });
+
+
+// https://github.com/IgorMarques/that-s-the-way-you-do-it/commit/9aa9fc5d201240758f09e9c1b2aca919e2c288db
+// "https://api.github.com/repos/octocat/Hello-World/git/commits/6dcb09b5b57875f334f61aebed695e2e4193db5e
 
 //transforms this https://github.com/IgorMarques/that-s-the-way-you-do-it/blob/master/app/models/doc.rb
 
