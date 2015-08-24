@@ -21,7 +21,7 @@ getRelevantLines = function(patch){
 formatCommitText = function(change){
   //add language here
   lang = "diff";
-  // lang = langs[getExtension.exec(change["blob_url"])[1]] || lang;
+  // lang = getLanguage(change["blob_url"])
 
-  return change["blob_url"] + "\n\n"+ markupText + lang + "\n" + getRelevantLines(change["patch"]) + "\n" + markupText + "\n\n";
+  return change["blob_url"] + codefyText(getRelevantLines(change["patch"])+ "\n")
 }

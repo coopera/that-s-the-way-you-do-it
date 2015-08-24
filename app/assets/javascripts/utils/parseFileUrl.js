@@ -4,7 +4,7 @@ parseFileUrl = function(pastedLink){
 
   var fileName = pastedLink.split("#")[0];
 
-  var lang = langs[getExtension.exec(fileName)[1]] || lang
+  var lang = getLanguage(fileName);
 
   if(pastedLink.search("#L") != -1){
     index = parseInt(pastedLink.split("#L")[1]);
@@ -17,5 +17,5 @@ parseFileUrl = function(pastedLink){
 
   var code = getAppropriateLines(content, index, finalIndex);
 
-  return pastedLink + "\n\n" + markupText + lang + "\n" + code + markupText;
+  return pastedLink + codefyText(code)
 }
