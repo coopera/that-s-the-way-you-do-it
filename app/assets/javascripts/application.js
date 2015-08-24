@@ -20,25 +20,30 @@
 document.addEventListener("DOMContentLoaded", function () {
   var doc_implementation = document.getElementById('doc_implementation');
 
-  doc_implementation.onpaste = function(e) {
-    var pastedLink = getPastedContent(e);
+  if(doc_implementation){
+    doc_implementation.onpaste = function(e) {
+      var pastedLink = getPastedContent(e);
 
-    if(pastedLink.search("github.com/") != -1 && pastedLink.search("api.github.com/") == -1){
+      lang = "ruby";
+      markupText = "```";
 
-      var text;
+      if(pastedLink.search("github.com/") != -1 && pastedLink.search("api.github.com/") == -1){
 
-      if (pastedLink.search("commit/") != -1) {
-        text = parseCommitUrl(pastedLink);
+        var text;
+
+        if (pastedLink.search("commit/") != -1) {
+          text = parseCommitUrl(pastedLink);
+        }
+        else{
+          text = parseFileUrl(pastedLink);
+        }
+
+        doc_implementation.value +=  text;
+
+        e.preventDefault();
       }
-      else{
-        text = parseFileUrl(pastedLink);
-      }
-
-      doc_implementation.value +=  text;
-
-      e.preventDefault();
-    }
-  };
+    };
+  }
 });
 
 

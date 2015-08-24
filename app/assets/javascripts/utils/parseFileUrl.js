@@ -1,8 +1,6 @@
 parseFileUrl = function(pastedLink){
   var index = -1;
   var finalIndex;
-  var lang = "ruby";
-  var markupText = "```";
 
   var fileName = pastedLink.split("#")[0];
 
