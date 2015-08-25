@@ -2,7 +2,8 @@ class DocsController < ApplicationController
   before_action :set_doc, only: [:show, :edit, :update, :destroy]
 
   def index
-    @docs = Doc.all
+    @q = Doc.ransack(params[:q])
+    @docs = @q.result(distinct: true)
   end
 
   def show
