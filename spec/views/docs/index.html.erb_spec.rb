@@ -6,6 +6,7 @@ RSpec.describe "docs/index", type: :view do
       create(:doc),
       create(:doc)
     ])
+    assign(:q, Doc.ransack(params[:q]))
   end
 
   it "renders a list of docs" do

@@ -8,6 +8,8 @@
 <br>
 <br>
 
+<%= render "doc_search_form" %>
+
 <% unless @docs.empty? %>
   <% @docs.each do |doc| %>
     <h2><%= link_to doc.title, doc%></h2>
