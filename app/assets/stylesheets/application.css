@@ -18,6 +18,7 @@ body{
   font-family: 'Helvetica';
   font-weight: lighter;
   color: #595959;
+  /*background: red;*/
 }
 
 .faded{
@@ -60,4 +61,14 @@ a:visited {
 
 .fill_witdh{
   width: 100%;
+}
+
+.small-tag{
+  background-color: #dbdada;
+  padding: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: inline-block;
+  border-radius: 4px;
+  margin-right: 5px;
 }
