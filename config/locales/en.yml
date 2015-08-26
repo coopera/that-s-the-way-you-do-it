@@ -15,6 +15,7 @@ en:
   doc_deleted_success: "Doc was successfully destroyed."
   add_link: "add related link"
   remove_link: "delete this link"
+  doc_search: "Search for title, description, implementation or related links"
   date:
     abbr_day_names:
     - Sun

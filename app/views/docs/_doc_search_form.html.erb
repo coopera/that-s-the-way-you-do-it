@@ -1,6 +1,6 @@
 <%= search_form_for @q do |f| %>
 
-  <%= f.search_field :title_or_description_or_implementation_or_related_links_title_cont %>
+  <%= f.search_field :title_or_description_or_implementation_or_related_links_title_cont, placeholder: t(:doc_search) %>
 
   <%= f.submit %>
 <% end %>
