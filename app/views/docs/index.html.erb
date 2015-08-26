@@ -8,6 +8,8 @@
 <br>
 <br>
 
+<%= render "doc_search_form" %>
+
 <% unless @docs.empty? %>
   <% @docs.each do |doc| %>
     <h2><%= link_to doc.title, doc%></h2>
@@ -22,3 +24,7 @@
 <% else %>
   <%= t('no docs')%>
 <% end %>
+
+<p>
+  <%= @docs.count %> document(s) match the current search.
+</p>

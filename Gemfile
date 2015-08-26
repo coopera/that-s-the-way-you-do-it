@@ -43,6 +43,9 @@ gem 'acts-as-taggable-on'
 #nested forms
 gem "cocoon"
 
+#search
+gem 'ransack'
+
 group :development, :test do
 
   gem 'sqlite3'
