@@ -4,6 +4,7 @@ class DocsController < ApplicationController
   def index
     @q = Doc.ransack(params[:q])
     @docs = @q.result(distinct: true)
+    @tags = ActsAsTaggableOn::Tag.all
   end
 
   def show
