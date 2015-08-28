@@ -23,5 +23,5 @@ formatCommitText = function(change){
   lang = "diff";
   // lang = getLanguage(change["blob_url"])
 
-  return change["blob_url"] + codefyText(getRelevantLines(change["patch"])+ "\n")
+  return codefyText(getRelevantLines(change["patch"])+ "\n")
 }

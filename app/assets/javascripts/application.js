@@ -19,32 +19,62 @@
 //= require_self
 
 document.addEventListener("DOMContentLoaded", function () {
-  var doc_implementation = document.getElementById('doc_implementation');
 
-  if(doc_implementation){
-    doc_implementation.onpaste = function(e) {
-      var pastedLink = getPastedContent(e);
+  var editor = ace.edit("editor");
 
-      lang = "ruby";
-      markupText = "```";
+  editor.on("paste", function(e){
+    var pastedLink = e.text;
 
-      if(pastedLink.search("github.com/") != -1 && pastedLink.search("api.github.com/") == -1){
+    lang = "ruby";
+    markupText = "```";
 
-        var text;
+    if(pastedLink.search("github.com/") != -1 && pastedLink.search("api.github.com/") == -1){
 
-        if (pastedLink.search("commit/") != -1) {
-          text = parseCommitUrl(pastedLink);
-        }
-        else{
-          text = parseFileUrl(pastedLink);
-        }
+      var text;
 
-        doc_implementation.value +=  text;
-
-        e.preventDefault();
+      if (pastedLink.search("commit/") != -1) {
+        text = parseCommitUrl(pastedLink);
       }
-    };
-  }
+      else{
+        text = parseFileUrl(pastedLink);
+      }
+
+      var session = editor.session
+
+      session.insert({
+         row: editor.getCursorPosition().row,
+         column: 0
+      }, text)
+
+    }
+  });
+
+  // var doc_implementation = document.getElementById('editor');
+  //
+  // if(doc_implementation){
+  //   doc_implementation.onpaste = function(e) {
+  //     var pastedLink = getPastedContent(e);
+  //
+  //     lang = "ruby";
+  //     markupText = "```";
+  //
+  //     if(pastedLink.search("github.com/") != -1 && pastedLink.search("api.github.com/") == -1){
+  //
+  //       var text;
+  //
+  //       if (pastedLink.search("commit/") != -1) {
+  //         text = parseCommitUrl(pastedLink);
+  //       }
+  //       else{
+  //         text = parseFileUrl(pastedLink);
+  //       }
+  //
+  //       doc_implementation.value +=  text;
+  //
+  //       e.preventDefault();
+  //     }
+  //   };
+  // }
 });
 
 

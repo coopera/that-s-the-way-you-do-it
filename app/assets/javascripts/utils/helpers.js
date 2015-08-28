@@ -1,5 +1,5 @@
 codefyText = function(s){
-  return "\n\n"+ markupText + lang + "\n" + s + markupText + "\n\n";
+  return markupText + lang + "\n" + s + markupText + "\n";
 }
 
 getLanguage = function(s){
