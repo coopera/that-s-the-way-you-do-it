@@ -1,0 +1,17 @@
+<h2><%= link_to doc.title, doc%></h2>
+<div class="small faded">
+  <%= t('updated at') + " " + l(doc.updated_at, format: :short) %>
+</div>
+<p>
+  <%= doc.description%>
+</p>
+
+<% doc.tags.each do |t| %>
+  <%= link_to docs_path(tag: t.id) do %>
+    <div class="small-tag">
+      <%= t %>
+    </div>
+  <% end %>
+<% end %>
+
+<hr>
