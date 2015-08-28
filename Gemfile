@@ -46,6 +46,9 @@ gem "cocoon"
 #search
 gem 'ransack'
 
+#ace text editor
+gem 'ace-rails-ap'
+
 group :development, :test do
 
   gem 'sqlite3'

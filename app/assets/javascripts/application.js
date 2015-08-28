@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require cocoon
 //= require turbolinks
+//= require ace-rails-ap
 //= require_tree .
 //= require_self
 
