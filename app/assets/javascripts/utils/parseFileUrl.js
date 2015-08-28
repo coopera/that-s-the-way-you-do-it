@@ -17,5 +17,5 @@ parseFileUrl = function(pastedLink){
 
   var code = getAppropriateLines(content, index, finalIndex);
 
-  return pastedLink + codefyText(code)
+  return codefyText(code)
 }
