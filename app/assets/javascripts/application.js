@@ -15,5 +15,6 @@
 //= require cocoon
 //= require turbolinks
 //= require ace-rails-ap
+//= require ace/theme-github
 //= require_tree .
 //= require_self
