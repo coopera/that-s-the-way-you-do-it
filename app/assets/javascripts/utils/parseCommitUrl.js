@@ -1,14 +1,12 @@
 parseCommitUrl = function(url){
-  // var changes = JSON.parse(httpGet(getCommitApiUrl(url))["files"]);
   var changes = JSON.parse(httpGet(getCommitApiUrl(url)))["files"];
 
-  var changed_files = url + "\n\n";
+  var changed_files = "";
 
   for (var i = 0; i < changes.length; i++) {
     changed_files += formatCommitText(changes[i]);
-
   }
-  return changed_files
+  return changed_files;
 }
 
 // https://github.com/IgorMarques/that-s-the-way-you-do-it/commit/9aa9fc5d201240758f09e9c1b2aca919e2c288db
@@ -23,5 +21,5 @@ formatCommitText = function(change){
   lang = "diff";
   // lang = getLanguage(change["blob_url"])
 
-  return codefyText(getRelevantLines(change["patch"])+ "\n")
+  return codefyText(getRelevantLines(change["patch"])+ "\n");
 }

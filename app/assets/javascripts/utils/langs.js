@@ -14,4 +14,4 @@ langs = {
   'ts': 'typescript',
   'go': 'go',
   'scala': 'scala'
-}
+};

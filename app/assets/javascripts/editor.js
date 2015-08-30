@@ -1,8 +1,15 @@
+var initiated = false;
 $(function() {
-  initPage();
+  if(!initiated){
+    initPage();
+    initiated = true;
+  }
 });
 $(window).bind('page:change', function() {
-  initPage();
+  if(!initiated){
+    initPage();
+    initiated = true;
+  }
 });
 function initPage() {
   try {
@@ -30,7 +37,10 @@ function initPage() {
           if (pastedLink.search("commit/") != -1) {
             text = parseCommitUrl(pastedLink);
           }
-          else{
+          else if (pastedLink.search("/pull/") != -1){
+            text = parsePullUrl(pastedLink);
+          }
+          else {
             text = parseFileUrl(pastedLink);
           }
 
