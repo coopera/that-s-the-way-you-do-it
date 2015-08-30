@@ -18,7 +18,3 @@ parsePullUrl = function(url){
 
   return changed_files;
 }
-
-
-// https://github.com/IgorMarques/that-s-the-way-you-do-it/pull/19
-// https://api.github.com/repos/IgorMarques/that-s-the-way-you-do-it/pulls/19
