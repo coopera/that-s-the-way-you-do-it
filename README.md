@@ -7,6 +7,8 @@
 
 **Money For Nothing - Dire Straits**
 
+**That's The Way You Do It** is a tutorials catalog for software development teams. Are you tired of repeating the same explanations over and over for your interns? Solved a bug that you couldn't find the anwer anywhere on Stack Overflow? Found an awesome way to code a feature? Show to your team: hey, **That's The Way You Do It**!
+
 ## Answering a few questions
 
 ### What can I do with this?
