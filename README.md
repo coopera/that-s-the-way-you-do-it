@@ -7,15 +7,15 @@
 
 **Money For Nothing - Dire Straits**
 
-**That's The Way You Do It** is a tutorials catalog for software development teams. 
+**That's The Way You Do It** is a tutorials catalog for software development teams.
 
-Are you tired of repeating the same explanations over and over for your interns? Solved a bug that you couldn't find the anwer anywhere on Stack Overflow? Found an awesome way to code a feature? Show to your team: "hey, **That's The Way You Do It**!"
+Are you tired of repeating the same explanations over and over for your interns? Solved a bug that you couldn't find the answer anywhere on Stack Overflow? Found an awesome way to code a feature? Show to your team: "hey, **That's The Way You Do It**!"
 
 ## Answering a few questions
 
 ### What can I do with this?
 
-I'm glad you asked! With **That's The Way You Do It** you can create beautiful markdown tutorials in a fast way, focusing on the writing instead of on the copying and pasting. 
+I'm glad you asked! With **That's The Way You Do It** you can create beautiful markdown tutorials in a fast way, focusing on the writing instead of on the copying and pasting.
 
 ### Just it? What differs this project from other markdown editors?
 
@@ -33,15 +33,15 @@ Yeah, on **That's The Way You Do It** you can import code from:
 
 ### And how can I do that?
 
-Simple: 
+Simple:
 
 **paste the link of what you whant and the editor grabs the code for you**
 
 Types of links that are supported at the moment:
 
-- A file: 
+- A file:
   - https://github.com/IgorMarques/that-s-the-way-you-do-it/blob/master/app/models/doc.rb
-- Line interval from a file: 
+- Line interval from a file:
   - https://github.com/IgorMarques/that-s-the-way-you-do-it/blob/master/app/models/doc.rb#L5-L7
 - A line from a file:
   - https://github.com/IgorMarques/that-s-the-way-you-do-it/blob/master/app/models/doc.rb#L1
@@ -49,7 +49,7 @@ Types of links that are supported at the moment:
   - https://github.com/IgorMarques/that-s-the-way-you-do-it/commit/d7f365db9777b4cb6e1c5799a2e431c58aaf3a19
 - A pull request
   - https://github.com/IgorMarques/that-s-the-way-you-do-it/pull/7
-  
+
 Types of links that are *expected* to be supported (someday):
 
 - Gists
@@ -63,4 +63,4 @@ No, it's **That's The Way You Do It** :sunglasses:
 
 Found any bugs? Have any suggestion? Just create an issue or send me an e-mail.
 
-Cheers! :beers: 
+Cheers! :beers:
