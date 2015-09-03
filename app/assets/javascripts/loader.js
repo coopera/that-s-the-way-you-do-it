@@ -1,7 +1,3 @@
-$(window).bind('page:change', function() {
-  loadEditor();
-});
-
-$( document ).ready(function() {
+$(document).on('ready page:load', function () {
   loadEditor();
 });
