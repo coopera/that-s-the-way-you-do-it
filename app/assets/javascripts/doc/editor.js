@@ -1,17 +1,4 @@
-var initiated = false;
-$(function() {
-  if(!initiated){
-    initPage();
-    initiated = true;
-  }
-});
-$(window).bind('page:change', function() {
-  if(!initiated){
-    initPage();
-    initiated = true;
-  }
-});
-function initPage() {
+loadEditor = function() {
   try {
     var editor = ace.edit("editor");
 
