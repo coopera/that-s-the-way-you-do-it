@@ -5,6 +5,10 @@ class DocsController < ApplicationController
     @q = Doc.ransack(params[:q])
     @docs = @q.result(distinct: true)
 
+    if params[:author]
+      @docs = @docs.where(user_id: params[:author])
+    end
+
     if params[:tag]
       @docs = @docs.tagged_with(ActsAsTaggableOn::Tag.find(params[:tag]))
     end

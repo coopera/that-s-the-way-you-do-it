@@ -1,7 +1,9 @@
 <h2><%= link_to doc.title, doc%></h2>
 
 <p>
-  by <%= doc.user.name %>
+  <% if doc.user %>
+    by <%= doc.user.name %>
+  <% end %>
 </p>
 
 <div class="small faded">

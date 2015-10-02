@@ -61,7 +61,7 @@
 <% end %>
 
 <script>
-  <% if current_user %>
+  <% if logged_in? %>
     token = "<%= current_user.token %>"
   <% else %>
     token = undefined
