@@ -1,10 +1,10 @@
 parsePullUrl = function(url){
 
-  var commits_url = JSON.parse(httpGet(getPullApiUrl(url)))["commits_url"];
+  var commitsUrl = JSON.parse(httpGet(getPullApiUrl(url)))["commitsUrl"];
 
-  var commits  = JSON.parse(httpGet(commits_url));
+  var commits  = JSON.parse(httpGet(commitsUrl));
 
-  var changed_files = "";
+  var changedFiles = "";
 
   console.log(commits.length);
 
@@ -12,9 +12,9 @@ parsePullUrl = function(url){
     var changes = JSON.parse(httpGet(commits[i]["url"]))["files"];
 
     for (var j = 0; j < changes.length; j++) {
-      changed_files += formatCommitText(changes[j]);
+      changedFiles += formatCommitText(changes[j]);
     }
   }
 
-  return changed_files;
+  return changedFiles;
 }

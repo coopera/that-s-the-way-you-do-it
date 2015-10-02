@@ -1,17 +1,4 @@
-var initiated = false;
-$(function() {
-  if(!initiated){
-    initPage();
-    initiated = true;
-  }
-});
-$(window).bind('page:change', function() {
-  if(!initiated){
-    initPage();
-    initiated = true;
-  }
-});
-function initPage() {
+function loadEditor() {
   try {
     var editor = ace.edit("editor");
 
@@ -34,10 +21,13 @@ function initPage() {
 
           var text;
 
-          if (pastedLink.search("commit/") != -1) {
+          var isAcommit = pastedLink.search("commit/") != -1;
+          var isApull = pastedLink.search("/pull/") != -1;
+
+          if (isAcommit) {
             text = parseCommitUrl(pastedLink);
           }
-          else if (pastedLink.search("/pull/") != -1){
+          else if (isApull){
             text = parsePullUrl(pastedLink);
           }
           else {

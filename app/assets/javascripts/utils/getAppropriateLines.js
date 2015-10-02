@@ -1,5 +1,7 @@
 function getAppropriateLines(content, index, finalIndex){
 
+  finalIndex = finalIndex || index;
+
   if(index != -1){
     var lines = content.split("\n");
     var result = "";
