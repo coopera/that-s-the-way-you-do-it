@@ -8,7 +8,7 @@ parseFileUrl = function(pastedLink){
 
   if(pastedLink.search("#L") != -1){
     index = parseInt(pastedLink.split("#L")[1]);
-    finalIndex = pastedLink.split("#L")[1].split("-L")[1];
+    finalIndex = pastedLink.split("#L")[1].split("-L")[1] || index;
   }
 
   file = getFileApiUrl(pastedLink);
