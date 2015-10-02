@@ -25,6 +25,8 @@ class DocsController < ApplicationController
   def create
     @doc = Doc.new(doc_params)
 
+    @doc.user = current_user if current_user
+
     respond_to do |format|
       if @doc.save
         respond_with_success(format, t('doc_created_success'))
