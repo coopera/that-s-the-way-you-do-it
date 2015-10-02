@@ -49,6 +49,9 @@ gem 'ransack'
 #ace text editor
 gem 'ace-rails-ap'
 
+gem 'omniauth'
+gem 'omniauth-github'
+
 group :development, :test do
 
   gem 'sqlite3'
@@ -69,6 +72,8 @@ group :development, :test do
   gem 'factory_girl_rails'
 
   gem 'database_cleaner'
+
+  gem 'dotenv-rails'
 end
 
 group :production do
