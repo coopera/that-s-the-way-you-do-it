@@ -58,3 +58,14 @@ body{
   line-height: 2em;
   text-align: center;
 }
+
+.doc{
+  line-height: 2em;
+  p{
+    margin-top: 1em;
+  }
+}
+
+hr{
+  border-color: $color_dark_gray;
+}

@@ -11,7 +11,9 @@
             <%= t('updated at') + " " + l(doc.updated_at, format: :short) %>
           </div>
           <% if doc.user %>
-            <%= image_tag doc.user.avatar, class: "doc-preview-user-avatar", alt: "user-avatar" %>
+            <%= link_to docs_path(author: doc.user) do %>
+              <%= image_tag doc.user.avatar, class: "doc-preview-user-avatar", alt: "user-avatar" %>
+            <% end %>
           <% end %>
         </div>
       </div>

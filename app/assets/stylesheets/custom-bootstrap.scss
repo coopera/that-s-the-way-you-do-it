@@ -54,3 +54,8 @@ a:visited {
     margin-right: 10px
   }
 }
+
+.doc-show-avatar{
+  @extend .img-responsive, .img-circle, .pull-right;
+  width: 64px;
+}

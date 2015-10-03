@@ -3,8 +3,8 @@ en:
   new doc title: "New twydi"
   edit doc title: "Editing twydi"
   doc index title: "Twydies"
-  all doc: "all twydies"
-  your docs: "your twydies"
+  all_docs: "all twydies"
+  your_docs: "your twydies"
   no docs: "Can't find any twydies here :("
   updated at: "last updated at"
   edit doc: "EDIT THIS TWYDI"
@@ -16,6 +16,9 @@ en:
   add_link: "add related link"
   remove_link: "delete this link"
   doc_search: "Search for title, description, implementation or related links"
+  no_links: "No links related do this twydi"
+  no_tags: "No tags related to this twydi"
+  docs written by: "Only twydies written by"
   date:
     abbr_day_names:
     - Sun
