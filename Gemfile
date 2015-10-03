@@ -56,6 +56,8 @@ gem 'bootstrap-sass', '~> 3.3.5'
 
 gem 'font-awesome-sass', '~> 4.4.0'
 
+gem 'friendly_id', '~> 5.1.0'
+
 group :development, :test do
 
   gem 'sqlite3'

@@ -72,7 +72,7 @@ class DocsController < ApplicationController
     end
 
     def set_doc
-      @doc = Doc.find(params[:id])
+      @doc = Doc.friendly.find(params[:id])
     end
 
     def doc_params
