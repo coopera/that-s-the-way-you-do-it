@@ -16,6 +16,8 @@
 //= require turbolinks
 //= require ace-rails-ap
 //= require ace/theme-github
+//= require jquery
+//= require bootstrap-sprockets
 //= require_tree .
 //= require_self
 
