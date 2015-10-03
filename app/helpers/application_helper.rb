@@ -22,12 +22,4 @@ module ApplicationHelper
     @markdown_to_html = Redcarpet::Markdown.new(@coderayified, options)
     @markdown_to_html.render(text).html_safe
   end
-
-  def logged_in?
-    !!current_user #double negation to convert to boolean
-  end
-
-  def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id] #memoized
-  end
 end
