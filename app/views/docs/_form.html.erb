@@ -59,3 +59,11 @@
   </div>
 
 <% end %>
+
+<script>
+  <% if logged_in? %>
+    token = "<%= current_user.token %>"
+  <% else %>
+    token = undefined
+  <% end %>
+</script>

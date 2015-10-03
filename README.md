@@ -59,6 +59,18 @@ Types of links that are *expected* to be supported (someday):
 
 No, it's **That's The Way You Do It** :sunglasses:
 
+## Running
+
+Create a new app here:
+
+https://github.com/settings/applications/new
+
+And copy the ID and secret of the app and paste them at your .env file.
+
+Remember:
+
+**DON'T COMMIT THE .ENV FILE TO THE VCS**
+
 ## Contact
 
 Found any bugs? Have any suggestion? Just create an issue or send me an e-mail.

@@ -5,6 +5,8 @@ class CreateDocs < ActiveRecord::Migration
       t.text :description
       t.text :implementation
 
+      t.references :user
+      
       t.timestamps null: false
     end
   end

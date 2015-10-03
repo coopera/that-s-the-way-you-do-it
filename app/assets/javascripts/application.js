@@ -18,3 +18,7 @@
 //= require ace/theme-github
 //= require_tree .
 //= require_self
+
+$(document).on('ready page:load', function () {
+  loadEditor();
+});

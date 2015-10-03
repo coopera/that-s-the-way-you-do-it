@@ -11,12 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150823214313) do
+ActiveRecord::Schema.define(version: 20151002160127) do
 
   create_table "docs", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
     t.text     "implementation"
+    t.integer  "user_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
@@ -50,5 +51,17 @@ ActiveRecord::Schema.define(version: 20150823214313) do
   end
 
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true
+
+  create_table "users", force: :cascade do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "email"
+    t.string   "avatar"
+    t.string   "name"
+    t.string   "token"
+    t.string   "nickname"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

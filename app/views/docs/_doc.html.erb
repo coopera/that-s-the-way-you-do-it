@@ -1,7 +1,15 @@
 <h2><%= link_to doc.title, doc%></h2>
+
+<p>
+  <% if doc.user %>
+    by <%= doc.user.name %>
+  <% end %>
+</p>
+
 <div class="small faded">
   <%= t('updated at') + " " + l(doc.updated_at, format: :short) %>
 </div>
+
 <p>
   <%= doc.description%>
 </p>
