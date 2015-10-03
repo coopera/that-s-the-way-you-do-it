@@ -1,10 +1,13 @@
-<%= search_form_for @q do |f| %>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <%= search_form_for @q do |f| %>
 
-  <div class="form-group form-inline">
-    <%= f.search_field :title_or_description_or_implementation_or_related_links_title_cont, placeholder: t(:doc_search), class: "form-control" %>
+      <div class="form-group form-inline">
+        <%= f.search_field :title_or_description_or_implementation_or_related_links_title_cont, placeholder: t(:doc_search), class: "form-control" %>
 
-    <%= f.submit nil, class: 'btn btn-default' %>
+        <%= f.submit nil, class: 'btn btn-default' %>
+      </div>
+
+    <% end %>
   </div>
-
-
-<% end %>
+</div>

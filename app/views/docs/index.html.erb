@@ -2,6 +2,12 @@
 
 <%= render "doc_search_form" %>
 
+<% if @author %>
+  <p>
+    <%= t('docs written by') %>: <strong><%= @author.name %></strong>
+  </p>
+<% end %>
+
 <% unless @docs.empty? %>
   <%= render @docs %>
 <% else %>

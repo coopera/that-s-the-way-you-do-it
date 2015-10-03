@@ -7,6 +7,7 @@ class DocsController < ApplicationController
 
     if params[:author]
       @docs = @docs.where(user_id: params[:author])
+      @author = User.find params[:author]
     end
 
     if params[:tag]

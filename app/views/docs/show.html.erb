@@ -1,36 +1,61 @@
 <p id="notice"><%= notice %></p>
 
-<h1> <%= @doc.title %> </h1>
-<div class="faded">
-  <%= t('created at') + " " + l(@doc.created_at, format: :short) %>
-  ,
-  <%= t('updated at') + " " + l(@doc.updated_at, format: :short) %>
-</div>
-<p>
-  <%= @doc.description %>
-</p>
+<div class="doc">
+  <div class="row">
+    <div class="col-md-11">
+      <h1> <%= @doc.title %> </h1>
+    </div>
+    <div class="col-md-1">
+      <%= link_to docs_path(author: @doc.user) do %>
+        <%= image_tag @doc.user.avatar, class: 'doc-show-avatar' %>
+      <% end %>
+    </div>
+  </div>
 
-<hr>
-
-<p>
-  <%= markdown @doc.implementation %>
-</p>
-
-<strong>Useful Links</strong>
-<p>
-  <% @doc.related_links.each do |link| %>
-    <li>
-      <%= link.title %>
-      <%= link.link %>
-    </li>
+  <% if current_user == @doc.user %>
+    <%= link_to icon("edit") + " " + t('edit doc'), edit_doc_path(@doc), class: "btn btn-default" %>
+    <%= link_to icon("trash-o") + " " + t('delete doc'), @doc, method: :delete, class: "btn btn-default", data: {confirm: "Are you sure?"} %>
+    <br>
   <% end %>
-</p>
 
-<strong>Tags</strong>
-<p>
-  <%= @doc.tag_list %>
-</p>
+  <div class="faded">
+    <%= t('created at') + " " + l(@doc.created_at, format: :short) %>
+    ,
+    <%= t('updated at') + " " + l(@doc.updated_at, format: :short) %>
+  </div>
+  <p>
+    <%= @doc.description %>
+  </p>
 
-<hr>
+  <hr>
 
-<%= link_to t('edit doc'), edit_doc_path(@doc) %>
+  <p>
+    <%= markdown @doc.implementation %>
+  </p>
+
+  <hr>
+
+  <strong>Useful Links</strong>
+  <p>
+    <% if @doc.related_links.present? %>
+      <% @doc.related_links.each do |link| %>
+        <li>
+          <%= link.title %>
+          <%= link.link %>
+        </li>
+      <% end %>
+    <% else %>
+     <%= t('no_links') %>
+    <% end %>
+  </p>
+
+  <strong>Tags</strong>
+  <p>
+    <% if @doc.tags.present? %>
+      <%= render partial: "docs/tag", collection: @doc.tags  %>
+    <% else %>
+      <%= t('no_tags') %>
+    <% end %>
+  </p>
+
+</div>

@@ -15,17 +15,20 @@
 
     <div class="row">
 
-      <div class="col-md-4 up-menu">
+      <div class="col-md-5 up-menu">
         <%= render "utils/menu" %>
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-2">
         <%= link_to root_url do %>
           <%= image_tag "logo.png", class: "img-responsive logo", alt: "logo" %>
          <% end %>
+         <p class="text-center">
+           "WTF is a Twydi?" Read <a href="https://github.com/IgorMarques/that-s-the-way-you-do-it/blob/master/README.md">here ;)</a>
+         </p>
       </div>
 
-      <div class="col-md-4 up-menu">
+      <div class="col-md-5 up-menu">
         <div class="pull-right">
           <% if logged_in? %>
             <%= current_user.name %>
@@ -42,15 +45,17 @@
 
     <hr>
 
-    Found a bug or has some feedback? <br>
+    <div class="footer">
+      <strong>Found a bug or has some feedback? </strong><br>
 
-    Please send me an e-mail at: igormarquessilva @ gmail.com <br>
+      Please send me an e-mail at: igormarquessilva @ gmail.com <br>
 
-    Or create an issue at the repo: <br>
+      Or create an issue at the repo: <br>
 
-    https://github.com/IgorMarques/that-s-the-way-you-do-it <br>
+      <a href="https://github.com/IgorMarques/that-s-the-way-you-do-it ">https://github.com/IgorMarques/that-s-the-way-you-do-it </a><br>
 
-    Thanks for testing the app :)
+      Thanks for testing the app :)
+    </div>
 
   </div>
 

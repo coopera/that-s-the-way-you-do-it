@@ -1,6 +1,8 @@
 @import "variables";
 @import "custom-bootstrap";
 @import "editor";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -12,6 +14,7 @@ body{
 
 .faded{
   color: #a4a4a4;
+  display: inline;
 }
 
 .small{
@@ -24,10 +27,6 @@ body{
 
 .tag_list{
   width: 50%;
-}
-
-.tag-count{
-  margin-bottom: .5em
 }
 
 .f_25{
@@ -48,8 +47,25 @@ body{
   display: inline-block;
   border-radius: 4px;
   margin-right: 5px;
+  margin-bottom: .5em
 }
 
 .logo{
   width: 200px;
+}
+
+.footer{
+  line-height: 2em;
+  text-align: center;
+}
+
+.doc{
+  line-height: 2em;
+  p{
+    margin-top: 1em;
+  }
+}
+
+hr{
+  border-color: $color_dark_gray;
 }
