@@ -39,6 +39,7 @@
 
     <br>
 
+    <%= f.label :related_links %><br>
     <div id="related_links">
       <%= f.fields_for :related_links do |related_link| %>
         <%= render 'related_link_fields', f: related_link %>
@@ -57,7 +58,7 @@
     <br>
 
     <div class="actions">
-      <%= f.submit t('submit doc')%>
+      <%= f.submit t('submit doc'), class: "btn btn-primary"%>
     </div>
 
   </div>
