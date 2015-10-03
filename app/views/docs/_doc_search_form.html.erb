@@ -1,6 +1,10 @@
 <%= search_form_for @q do |f| %>
 
-  <%= f.search_field :title_or_description_or_implementation_or_related_links_title_cont, placeholder: t(:doc_search) %>
+  <div class="form-group form-inline">
+    <%= f.search_field :title_or_description_or_implementation_or_related_links_title_cont, placeholder: t(:doc_search), class: "form-control" %>
 
-  <%= f.submit %>
+    <%= f.submit nil, class: 'btn btn-default' %>
+  </div>
+
+
 <% end %>

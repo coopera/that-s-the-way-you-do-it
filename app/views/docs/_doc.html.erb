@@ -6,9 +6,11 @@
   <% end %>
 </p>
 
-<div class="small faded">
-  <%= t('updated at') + " " + l(doc.updated_at, format: :short) %>
-</div>
+<p>
+  <div class="small faded">
+    <%= t('updated at') + " " + l(doc.updated_at, format: :short) %>
+  </div>
+</p>
 
 <p>
   <%= doc.description%>

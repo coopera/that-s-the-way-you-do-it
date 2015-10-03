@@ -52,6 +52,8 @@ gem 'ace-rails-ap'
 gem 'omniauth'
 gem 'omniauth-github'
 
+gem 'bootstrap-sass', '~> 3.3.5'
+
 group :development, :test do
 
   gem 'sqlite3'
