@@ -2,6 +2,12 @@
   <%= t('new doc title') %>
 </h1>
 
-<%= link_to t('cancel'), docs_path %>
+<%= link_to t('cancel'), docs_path, class: "pull-right" %>
+
+<br>
+
+<p>
+  <strong>Note: if you're logged in, you'll show as the twydi creator.</strong>
+</p>
 
 <%= render 'form' %>
