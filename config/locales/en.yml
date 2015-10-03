@@ -6,7 +6,7 @@ en:
   all doc: "all docs"
   your docs: "your docs"
   no docs: "Can't find any docs here :("
-  updated at: "updated at"
+  updated at: "last updated at"
   edit doc: "EDIT THIS DOC"
   cancel: "cancel"
   submit doc: "SUBMIT DOC"

@@ -1,27 +1,32 @@
-<h2><%= link_to doc.title, doc%></h2>
+<div class="doc-panel">
+  <div class="panel-body">
 
-<p>
-  <% if doc.user %>
-    by <%= doc.user.name %>
-  <% end %>
-</p>
-
-<p>
-  <div class="small faded">
-    <%= t('updated at') + " " + l(doc.updated_at, format: :short) %>
-  </div>
-</p>
-
-<p>
-  <%= doc.description%>
-</p>
-
-<% doc.tags.each do |t| %>
-  <%= link_to docs_path(tag: t.id) do %>
-    <div class="small-tag">
-      <%= t %>
+    <div class="row">
+      <div class="col-md-8">
+        <h2><%= link_to doc.title, doc%></h2>
+      </div>
+      <div class="col-md-4">
+        <div class="date-and-user-info">
+          <div class="small faded">
+            <%= t('updated at') + " " + l(doc.updated_at, format: :short) %>
+          </div>
+          <% if doc.user %>
+            <%= image_tag doc.user.avatar, class: "doc-preview-user-avatar", alt: "user-avatar" %>
+          <% end %>
+        </div>
+      </div>
     </div>
-  <% end %>
-<% end %>
 
-<hr>
+    <p>
+      <%= doc.description%>
+    </p>
+
+    <% doc.tags.each do |t| %>
+      <%= link_to docs_path(tag: t.id) do %>
+        <div class="small-tag">
+          <%= t %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

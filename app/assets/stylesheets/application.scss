@@ -14,6 +14,7 @@ body{
 
 .faded{
   color: #a4a4a4;
+  display: inline;
 }
 
 .small{
@@ -26,10 +27,6 @@ body{
 
 .tag_list{
   width: 50%;
-}
-
-.tag-count{
-  margin-bottom: .5em
 }
 
 .f_25{
@@ -50,8 +47,14 @@ body{
   display: inline-block;
   border-radius: 4px;
   margin-right: 5px;
+  margin-bottom: .5em
 }
 
 .logo{
   width: 200px;
+}
+
+.footer{
+  line-height: 2em;
+  text-align: center;
 }

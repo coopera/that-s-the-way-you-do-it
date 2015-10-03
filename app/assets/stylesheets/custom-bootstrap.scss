@@ -31,3 +31,26 @@ a:visited {
   }
   border-color: $color_pink !important;
 }
+
+.doc-panel{
+  @extend .panel, .panel-default;
+
+  h2{
+    margin-top: .5em;
+    font-size: 1.3em;
+  }
+
+  .doc-preview-user-avatar{
+    @extend .img-responsive, .img-circle;
+    width: 32px;
+    display: inline !important;
+  }
+
+  .date-and-user-info{
+    @extend .pull-right;
+  }
+
+  .faded{
+    margin-right: 10px
+  }
+}
