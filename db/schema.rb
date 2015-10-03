@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20151002160127) do
 
   create_table "docs", force: :cascade do |t|
     t.string   "title"
+    t.string   "slug"
     t.text     "description"
     t.text     "implementation"
     t.integer  "user_id"
