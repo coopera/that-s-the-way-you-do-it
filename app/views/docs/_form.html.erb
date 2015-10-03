@@ -3,61 +3,64 @@
 <% end %>
 
 <%= form_for(@doc) do |f| %>
-  <% if @doc.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@doc.errors.count, "error") %> prohibited this doc from being saved:</h2>
 
-      <ul>
-      <% @doc.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <div class="form-group">
 
-  <br>
+    <% if @doc.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@doc.errors.count, "error") %> prohibited this doc from being saved:</h2>
 
-  <%= f.label :title %><br>
-  <%= f.text_field :title %><br>
-
-  <br>
-
-  <%= f.label :description %><br>
-  <%= f.text_area :description, class: "description_area" %><br>
-
-  <br>
-
-  <%= f.label :implementation %><br>
-  <%= f.text_area :implementation, class: "implementation_area" %><br>
-  <div class="ace-container">
-    <div id="editor">
-    </div>
-  </div>
-
-
-  <br>
-
-  <div id="related_links">
-    <%= f.fields_for :related_links do |related_link| %>
-      <%= render 'related_link_fields', f: related_link %>
+        <ul>
+        <% @doc.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
     <% end %>
 
-    <div class="links">
-      <%= link_to_add_association t(:add_link), f, :related_links %>
+    <br>
+
+    <%= f.label :title %><br>
+    <%= f.text_field :title, class: "form-control" %><br>
+
+    <br>
+
+    <%= f.label :description %><br>
+    <%= f.text_area :description, class: "form-control description_area" %><br>
+
+    <br>
+
+    <%= f.label :implementation %><br>
+    <%= f.text_area :implementation, class: "implementation_area" %><br>
+    <div class="ace-container">
+      <div id="editor">
+      </div>
     </div>
+
+    <br>
+
+    <div id="related_links">
+      <%= f.fields_for :related_links do |related_link| %>
+        <%= render 'related_link_fields', f: related_link %>
+      <% end %>
+
+      <div class="links">
+        <%= link_to_add_association t(:add_link), f, :related_links %>
+      </div>
+    </div>
+
+    <br>
+
+    <%= f.label :tags %><br>
+    <%= f.text_field :tag_list, value: @doc.tag_list.to_s, class: "tag_list form-control"%>
+
+    <br>
+
+    <div class="actions">
+      <%= f.submit t('submit doc')%>
+    </div>
+
   </div>
-
-  <br>
-
-  <%= f.label :tags %><br>
-  <%= f.text_field :tag_list, value: @doc.tag_list.to_s, class: "tag_list"%>
-
-  <br>
-
-  <div class="actions">
-    <%= f.submit t('submit doc')%>
-  </div>
-
 <% end %>
 
 <script>
