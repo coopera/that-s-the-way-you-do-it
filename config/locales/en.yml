@@ -19,6 +19,7 @@ en:
   no_links: "No links related do this twydi"
   no_tags: "No tags related to this twydi"
   docs written by: "Only twydies written by"
+  delete doc: "DELETE THIS TWYDI"
   date:
     abbr_day_names:
     - Sun
