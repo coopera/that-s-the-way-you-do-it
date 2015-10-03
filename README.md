@@ -55,6 +55,8 @@ Types of links that are *expected* to be supported (someday):
 - Gists
 - Issues
 
+If you want to take code from private repos, just authenticate with your GitHub account!
+
 ### OMG, That's awesome!
 
 No, it's **That's The Way You Do It** :sunglasses:
