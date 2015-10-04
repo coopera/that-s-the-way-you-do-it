@@ -60,10 +60,20 @@
 
   <h3><%= t('feedback') %></h3>
 
-  <%= link_to "#" do %>
-    <button type="button" name="like-button" class="btn-like">
+  <% if logged_in? %>
+
+    <%= link_to "#" do %>
+      <button type="button" name="like-button" class="btn-like">
+        <%=  t('this was useful') %> <i class="fa fa-heart"></i>
+      </button>
+    <% end %>
+
+  <% else %>
+
+    <button type="button" name="like-button" class="btn-like disabled">
       <%=  t('this was useful') %> <i class="fa fa-heart"></i>
     </button>
-  <% end %>
 
+    <%= link_to t('login for feedback'), login_path %>
+  <% end %>
 </div>
