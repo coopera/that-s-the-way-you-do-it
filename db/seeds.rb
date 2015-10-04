@@ -10,7 +10,7 @@ User.create(name: "Martin Beck",
 
 User.create(name: "Aaron Grim",
             email: "aaron@viu.kent.ve",
-            avatar: "http://200.17.101.9/wiki/images/c/cc/Tim.jpeg")
+            avatar: "http://news.mit.edu/sites/mit.edu.newsoffice/files/images/2013/20130318105145-1_0.jpg")
 
 User.create(name: "Avid Patterson",
             email: "avid@viu.kent.ve",

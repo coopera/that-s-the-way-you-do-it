@@ -60,7 +60,12 @@ a:visited {
   width: 64px;
 }
 
-
 .btn-like{
-  @extend .btn, .btn-primary
+  @extend .btn, .btn-primary;
+}
+
+.small-liked-avatar{
+  @extend .img-circle;
+  width: 16px;
+  display: inline-block;
 }

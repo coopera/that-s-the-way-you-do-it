@@ -23,12 +23,28 @@
       <%= doc.description%>
     </p>
 
-    <% doc.tags.each do |t| %>
-      <%= link_to docs_path(tag: t.id) do %>
-        <div class="small-tag">
-          <%= t %>
+    <div class="row">
+      <div class="col-md-9">
+        <% doc.tags.each do |t| %>
+          <%= link_to docs_path(tag: t.id) do %>
+            <div class="small-tag">
+              <%= t %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="col-md-3">
+        <div class=" pull-right">
+          <%= icon('heart') %> by
+
+          <% if doc.users.length > 0 %>
+            <% doc.last_likes.each do |user| %>
+              <%= image_tag user.avatar, class: "small-liked-avatar" %>
+            <% end %>
+          <% end %>
+          and <%= doc.other_likes %> others
         </div>
-      <% end %>
-    <% end %>
+      </div>
+    </div>
   </div>
 </div>

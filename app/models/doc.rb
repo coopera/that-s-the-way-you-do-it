@@ -6,8 +6,7 @@ class Doc < ActiveRecord::Base
   has_many :related_links
   belongs_to :user
   has_many :likes
-  has_many :users, through: :users
-
+  has_many :users, through: :likes
 
   accepts_nested_attributes_for :related_links, reject_if: :all_blank, allow_destroy: true
 
@@ -21,8 +20,12 @@ class Doc < ActiveRecord::Base
     likes.where(user_id: user).exists?
   end
 
-  # def last_likes(3)
-  #   users.
-  # end
+  def last_likes(x = 4)
+    users.last(x).reverse
+  end
+
+  def other_likes
+    likes.count - last_likes.count
+  end
 
 end
