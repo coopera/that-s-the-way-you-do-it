@@ -35,14 +35,18 @@
       </div>
       <div class="col-md-3">
         <div class=" pull-right">
-          <%= icon('heart') %> by
 
-          <% if doc.users.length > 0 %>
+          <% if doc.users.present? %>
+            <%= icon('heart') %> by
             <% doc.last_likes.each do |user| %>
               <%= image_tag user.avatar, class: "small-liked-avatar" %>
             <% end %>
+
+            <% if doc.other_likes > 0 %>
+              and <%= doc.other_likes %> others
+            <% end %>
           <% end %>
-          and <%= doc.other_likes %> others
+
         </div>
       </div>
     </div>
