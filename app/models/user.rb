@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
                )
   end
 
-  def has_liked_this_doc(doc)
+  def liked?(doc)
     likes.where(doc_id: doc).exists?
   end
 

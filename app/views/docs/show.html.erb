@@ -62,7 +62,7 @@
 
   <% if logged_in? %>
 
-    <% if current_user.has_liked_this_doc(@doc) %>
+    <% if current_user.liked?(@doc) %>
       <button type="button" name="like-button" class="btn-like disabled">
         <%= t('already liked') %> <i class="fa fa-heart"></i>
       </button>

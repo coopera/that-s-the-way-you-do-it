@@ -21,4 +21,8 @@ class Doc < ActiveRecord::Base
     likes.where(user_id: user).exists?
   end
 
+  # def last_likes(3)
+  #   users.
+  # end
+
 end
