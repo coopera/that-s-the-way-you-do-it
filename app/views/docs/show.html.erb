@@ -62,10 +62,16 @@
 
   <% if logged_in? %>
 
-    <%= link_to "#" do %>
-      <button type="button" name="like-button" class="btn-like">
-        <%=  t('this was useful') %> <i class="fa fa-heart"></i>
+    <% if Like.user_has_liked_this_doc(current_user, @doc) %>
+      <button type="button" name="like-button" class="btn-like disabled">
+        <%= t('already liked') %> <i class="fa fa-heart"></i>
       </button>
+    <% else %>
+      <%= link_to like_path(doc: @doc), method: :post do %>
+        <button type="button" name="like-button" class="btn-like">
+          <%=  t('this was useful') %> <i class="fa fa-heart"></i>
+        </button>
+      <% end %>
     <% end %>
 
   <% else %>
