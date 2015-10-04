@@ -20,6 +20,8 @@ en:
   no_tags: "No tags related to this twydi"
   docs written by: "Only twydies written by"
   delete doc: "DELETE THIS TWYDI"
+  was that useful: Feedback
+  this was useful: this twydi helped me
   date:
     abbr_day_names:
     - Sun
