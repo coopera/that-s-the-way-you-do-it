@@ -16,4 +16,9 @@ class Doc < ActiveRecord::Base
   validates :title, length: { minimum: 5 }
 
   acts_as_ordered_taggable
+
+  def has_been_liked_by_this_user(user)
+    likes.where(user_id: user).exists?
+  end
+
 end
