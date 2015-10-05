@@ -2,27 +2,27 @@ lorem = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo
 
 User.create(name: "Kent Fowler",
             email: "kent@viu.kent.ve",
-            avatar: "https://pbs.twimg.com/profile_images/2556368541/alng5gtlmjhrdlr3qxqv.jpeg")
+            avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg")
 
 User.create(name: "Martin Beck",
             email: "kent@viu.kent.ve",
-            avatar: "http://nocapes.net/uncle_bob.jpg")
+            avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/sauro/128.jpg")
 
 User.create(name: "Aaron Grim",
             email: "aaron@viu.kent.ve",
-            avatar: "http://news.mit.edu/sites/mit.edu.newsoffice/files/images/2013/20130318105145-1_0.jpg")
+            avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/jadlimcaco/128.jpg")
 
 User.create(name: "Avid Patterson",
             email: "avid@viu.kent.ve",
-            avatar: "https://upload.wikimedia.org/wikipedia/commons/5/5c/Linus_Torvalds_(cropped).jpg")
+            avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg")
 
 User.create(name: "Ronaldinho",
             email: "dibre@viu.kent.ve",
-            avatar: "http://netflu.com.br/wp-content/uploads/2014/07/Ronaldinho-gaucho.jpg")
+            avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/mlane/128.jpg")
 
 User.create(name: "Chulapa",
             email: "danone@descubra.net",
-            avatar: "http://blogs.ne10.uol.com.br/social1/files/2015/04/aloisio-chulapa-e-seus-danones-no-instagram-1401216686773_956x500.jpg")
+            avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/motherfuton/128.jpg")
 
 Doc.create(title: "How to export a page in pdf",
            description: "This tutorial will teach you how to [...]",
