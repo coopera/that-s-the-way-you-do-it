@@ -58,8 +58,7 @@
     <% if @doc.related_links.present? %>
       <% @doc.related_links.each do |link| %>
         <li>
-          <%= link.title %>
-          <%= link.link %>
+          <%= link_to link.title, link.link %>
         </li>
       <% end %>
     <% else %>
