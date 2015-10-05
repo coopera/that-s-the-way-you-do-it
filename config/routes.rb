@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
 
   post '/docs/:id/like', to: 'likes#like', as: 'like'
+  delete '/docs/:id/dislike', to: 'likes#dislike', as: 'dislike'
 
   resources :docs
 

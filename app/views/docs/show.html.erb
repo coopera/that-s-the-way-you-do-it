@@ -84,6 +84,8 @@
       <button type="button" name="like-button" class="btn-like disabled">
         <%= t('already liked') %> <i class="fa fa-heart"></i>
       </button>
+      <%= t('doesnt like it anymore') %>
+      <%= link_to t('remove like'), dislike_path(doc: @doc), method: :delete%>
     <% else %>
       <%= link_to like_path(doc: @doc), method: :post do %>
         <button type="button" name="like-button" class="btn-like">
