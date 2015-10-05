@@ -27,7 +27,8 @@ en:
   doesnt like it anymore: Doesn't like anymore?
   remove like: "Remove your like :("
   thanks for the like: "Thanks for the feeback!"
-  like removed: "Your like was removed!" 
+  like removed: "Your like was removed!"
+  note twydi creator: "Note: if you're logged in, you'll show as this twydi's creator."
   date:
     abbr_day_names:
     - Sun
