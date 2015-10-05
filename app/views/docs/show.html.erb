@@ -45,6 +45,15 @@
     <%= @doc.description %>
   </p>
 
+  <strong>Tags</strong>
+  <p>
+    <% if @doc.tags.present? %>
+      <%= render partial: "docs/tag", collection: @doc.tags  %>
+    <% else %>
+      <%= t('no_tags') %>
+    <% end %>
+  </p>
+
   <hr>
 
   <p>
@@ -63,15 +72,6 @@
       <% end %>
     <% else %>
      <%= t('no_links') %>
-    <% end %>
-  </p>
-
-  <strong>Tags</strong>
-  <p>
-    <% if @doc.tags.present? %>
-      <%= render partial: "docs/tag", collection: @doc.tags  %>
-    <% else %>
-      <%= t('no_tags') %>
     <% end %>
   </p>
 

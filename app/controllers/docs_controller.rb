@@ -3,7 +3,7 @@ class DocsController < ApplicationController
 
   def index
     @q = Doc.ransack(params[:q])
-    @docs = @q.result(distinct: true)
+    @docs = @q.result(distinct: true).order(updated_at: :desc)
 
     if params[:author]
       @docs = @docs.where(user_id: params[:author])
