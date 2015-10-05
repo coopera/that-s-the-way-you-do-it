@@ -1,4 +1,5 @@
 parseCommitUrl = function(url){
+
   var changes = JSON.parse(httpGet(getCommitApiUrl(url)))["files"];
 
   var changedFiles = "";
@@ -18,5 +19,8 @@ formatCommitText = function(change){
   lang = "diff";
   // lang = getLanguage(change["blob_url"])
 
-  return codefyText(getRelevantLines(change["patch"])+ "\n");
+  if (change["patch"]){
+    return codefyText(getRelevantLines(change["patch"])+ "\n");
+  }
+
 }

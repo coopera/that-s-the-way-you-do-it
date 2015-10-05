@@ -1,12 +1,10 @@
 parsePullUrl = function(url){
 
-  var commitsUrl = JSON.parse(httpGet(getPullApiUrl(url)))["commitsUrl"];
+  var commitsUrl = JSON.parse(httpGet(getPullApiUrl(url)))["commits_url"];
 
   var commits  = JSON.parse(httpGet(commitsUrl));
 
   var changedFiles = "";
-
-  console.log(commits.length);
 
   for (var i = 0; i < commits.length; i++) {
     var changes = JSON.parse(httpGet(commits[i]["url"]))["files"];
