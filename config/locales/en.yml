@@ -33,6 +33,7 @@ en:
   login for private repo code: "If you want to import code from private repos, login first"
   types of imported links: "This types of links are supported"
   free to edit: "You're free to edit the imported text!"
+  no likes yet: "No one has liked this twydi yet. You can be the first ;)"
   date:
     abbr_day_names:
     - Sun

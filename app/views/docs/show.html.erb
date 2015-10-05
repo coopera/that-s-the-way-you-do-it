@@ -30,6 +30,10 @@
         <% if @doc.other_likes(10) > 0 %>
           and <%= @doc.other_likes %> others
         <% end %>
+      <% else %>
+        <div class="no-likes">
+          <%= t('no likes yet') %>
+        </div>
       <% end %>
 
     </div>
