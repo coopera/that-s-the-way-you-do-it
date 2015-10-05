@@ -2,7 +2,27 @@ lorem = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo
 
 User.create(name: "Kent Fowler",
             email: "kent@viu.kent.ve",
-            avatar: "https://pbs.twimg.com/profile_images/2556368541/alng5gtlmjhrdlr3qxqv.jpeg")
+            avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg")
+
+User.create(name: "Martin Beck",
+            email: "kent@viu.kent.ve",
+            avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/sauro/128.jpg")
+
+User.create(name: "Aaron Grim",
+            email: "aaron@viu.kent.ve",
+            avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/jadlimcaco/128.jpg")
+
+User.create(name: "Avid Patterson",
+            email: "avid@viu.kent.ve",
+            avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg")
+
+User.create(name: "Ronaldinho",
+            email: "dibre@viu.kent.ve",
+            avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/mlane/128.jpg")
+
+User.create(name: "Chulapa",
+            email: "danone@descubra.net",
+            avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/motherfuton/128.jpg")
 
 Doc.create(title: "How to export a page in pdf",
            description: "This tutorial will teach you how to [...]",
@@ -27,3 +47,17 @@ Doc.create(title: "How to use translations in rails",
           implementation: lorem,
           user_id: User.first.id,
           tag_list: "ruby, translation, locale")
+
+Like.create(user_id: 1, doc_id: 1)
+Like.create(user_id: 2, doc_id: 1)
+Like.create(user_id: 3, doc_id: 1)
+Like.create(user_id: 4, doc_id: 1)
+Like.create(user_id: 5, doc_id: 1)
+Like.create(user_id: 6, doc_id: 1)
+
+Like.create(user_id: 1, doc_id: 2)
+Like.create(user_id: 2, doc_id: 2)
+Like.create(user_id: 3, doc_id: 2)
+Like.create(user_id: 4, doc_id: 3)
+Like.create(user_id: 5, doc_id: 3)
+Like.create(user_id: 6, doc_id: 3)

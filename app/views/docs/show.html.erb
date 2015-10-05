@@ -18,11 +18,29 @@
     <br>
   <% end %>
 
-  <div class="faded">
-    <%= t('created at') + " " + l(@doc.created_at, format: :short) %>
-    ,
-    <%= t('updated at') + " " + l(@doc.updated_at, format: :short) %>
+  <div class="row">
+    <div class="col-md-6">
+
+      <% if @doc.users.present? %>
+        <%= icon('heart') %> by
+        <% @doc.last_likes(10).each do |user| %>
+          <%= image_tag user.avatar, class: "liked-avatar" %>
+        <% end %>
+
+        <% if @doc.other_likes(10) > 0 %>
+          and <%= @doc.other_likes %> others
+        <% end %>
+      <% end %>
+
+    </div>
+
+    <div class="col-md-6 doc-created-and-updated">
+      <%= t('created at') + " " + l(@doc.created_at, format: :short) %>
+      ,
+      <%= t('updated at') + " " + l(@doc.updated_at, format: :short) %>
+    </div>
   </div>
+
   <p>
     <%= @doc.description %>
   </p>
@@ -58,4 +76,30 @@
     <% end %>
   </p>
 
+  <h3><%= t('feedback') %></h3>
+
+  <% if logged_in? %>
+
+    <% if current_user.liked?(@doc) %>
+      <button type="button" name="like-button" class="btn-like disabled">
+        <%= t('already liked') %> <i class="fa fa-heart"></i>
+      </button>
+      <%= t('doesnt like it anymore') %>
+      <%= link_to t('remove like'), dislike_path(doc: @doc), method: :delete%>
+    <% else %>
+      <%= link_to like_path(doc: @doc), method: :post do %>
+        <button type="button" name="like-button" class="btn-like">
+          <%=  t('this was useful') %> <i class="fa fa-heart"></i>
+        </button>
+      <% end %>
+    <% end %>
+
+  <% else %>
+
+    <button type="button" name="like-button" class="btn-like disabled">
+      <%=  t('this was useful') %> <i class="fa fa-heart"></i>
+    </button>
+
+    <%= link_to t('login for feedback'), login_path %>
+  <% end %>
 </div>

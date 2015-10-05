@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
 
   has_many :docs
+  has_many :likes
+
+  has_many :docs_liked, through: :likes, source: :docs
 
   def self.create_from_omniauth(auth_hash)
     self.create(provider: auth_hash[:provider],
@@ -11,6 +14,10 @@ class User < ActiveRecord::Base
                 token: auth_hash[:credentials][:token],
                 nickname: auth_hash[:info][:nickname]
                )
+  end
+
+  def liked?(doc)
+    likes.where(doc_id: doc).exists?
   end
 
 end

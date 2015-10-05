@@ -59,3 +59,19 @@ a:visited {
   @extend .img-responsive, .img-circle, .pull-right;
   width: 64px;
 }
+
+.btn-like{
+  @extend .btn, .btn-primary;
+}
+
+.small-liked-avatar{
+  @extend .liked-avatar;
+  width: 16px;
+
+}
+
+.liked-avatar{
+  @extend .img-circle;
+  display: inline-block;
+  width: 32px;
+}
