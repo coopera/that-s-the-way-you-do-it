@@ -24,8 +24,8 @@ class Doc < ActiveRecord::Base
     users.last(x).reverse
   end
 
-  def other_likes
-    likes.count - last_likes.count
+  def other_likes(x=4)
+    likes.count - last_likes(10).count
   end
 
 end

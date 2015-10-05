@@ -18,11 +18,29 @@
     <br>
   <% end %>
 
-  <div class="faded">
-    <%= t('created at') + " " + l(@doc.created_at, format: :short) %>
-    ,
-    <%= t('updated at') + " " + l(@doc.updated_at, format: :short) %>
+  <div class="row">
+    <div class="col-md-6">
+
+      <% if @doc.users.present? %>
+        <%= icon('heart') %> by
+        <% @doc.last_likes(10).each do |user| %>
+          <%= image_tag user.avatar, class: "liked-avatar" %>
+        <% end %>
+
+        <% if @doc.other_likes(10) > 0 %>
+          and <%= @doc.other_likes %> others
+        <% end %>
+      <% end %>
+
+    </div>
+
+    <div class="col-md-6 doc-created-and-updated">
+      <%= t('created at') + " " + l(@doc.created_at, format: :short) %>
+      ,
+      <%= t('updated at') + " " + l(@doc.updated_at, format: :short) %>
+    </div>
   </div>
+
   <p>
     <%= @doc.description %>
   </p>

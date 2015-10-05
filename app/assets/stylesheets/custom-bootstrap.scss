@@ -65,7 +65,13 @@ a:visited {
 }
 
 .small-liked-avatar{
-  @extend .img-circle;
+  @extend .liked-avatar;
   width: 16px;
+
+}
+
+.liked-avatar{
+  @extend .img-circle;
   display: inline-block;
+  width: 32px;
 }
