@@ -13,9 +13,10 @@
   </div>
 
   <% if current_user == @doc.user %>
-    <%= link_to icon("edit") + " " + t('edit doc'), edit_doc_path(@doc), class: "btn btn-default" %>
-    <%= link_to icon("trash-o") + " " + t('delete doc'), @doc, method: :delete, class: "btn btn-default", data: {confirm: "Are you sure?"} %>
-    <br>
+    <div class="action-row">
+      <%= link_to icon("edit") + " " + t('edit doc'), edit_doc_path(@doc), class: "btn btn-default" %>
+      <%= link_to icon("trash-o") + " " + t('delete doc'), @doc, method: :delete, class: "btn btn-default", data: {confirm: "Are you sure?"} %>
+    </div>
   <% end %>
 
   <div class="row">
