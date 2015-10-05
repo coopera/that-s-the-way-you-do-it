@@ -30,10 +30,46 @@
 
     <br>
 
-    <%= f.label :implementation %><br>
-    <%= f.text_area :implementation, class: "implementation_area" %><br>
-    <div class="ace-container">
-      <div id="editor">
+    <div class="row">
+      <div class="col-md-7">
+        <%= f.label :implementation %><br>
+        <%= f.text_area :implementation, class: "implementation_area" %><br>
+        <div class="ace-container">
+          <div id="editor">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <h3>Tips:</h3>
+        <ul>
+          <li> <%= t('support markdown') %> <a href="https://help.github.com/articles/github-flavored-markdown/">GitHub Flavored Markdown</a></li>
+          <li> <%= t('login for private repo code') %> </li>
+          <li> <%= t('types of imported links')  %>:</li>
+          <ul>
+            <li>
+              <%= t('a file')  %>
+              <a>https://github.com/coopera/that-s-the-way-you-do-it/blob/master/app/models/doc.rb</a>
+            </li>
+            <li>
+               <%= t('a line from a file') %>:
+               <a>https://github.com/coopera/that-s-the-way-you-do-it/blob/master/app/models/doc.rb#L1</a>
+            </li>
+            <li>
+              <%= t('a line interval from a file') %>:
+              <a>https://github.com/coopera/that-s-the-way-you-do-it/blob/master/app/models/doc.rb#L5-L7</a>
+            </li>
+            <li>
+            <li>
+              <%= t('a commit') %>:
+              <a>https://github.com/coopera/that-s-the-way-you-do-it/commit/d7f365db9777b4cb6e1c5799a2e431c58aaf3a19</a>
+             </li>
+            <li>
+              <%= t('a pull request') %>:
+              <a>https://github.com/coopera/that-s-the-way-you-do-it/pull/7</a>
+             </li>
+          </ul>
+        </ul>
+        <li> <%=t('free to edit') %> </li>
       </div>
     </div>
 

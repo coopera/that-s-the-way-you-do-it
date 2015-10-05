@@ -29,6 +29,10 @@ en:
   thanks for the like: "Thanks for the feeback!"
   like removed: "Your like was removed!"
   note twydi creator: "Note: if you're logged in, you'll show as this twydi's creator."
+  support markdown: "This editor supports"
+  login for private repo code: "If you want to import code from private repos, login first"
+  types of imported links: "This types of links are supported"
+  free to edit: "You're free to edit the imported text!"
   date:
     abbr_day_names:
     - Sun
