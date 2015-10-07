@@ -59,7 +59,7 @@ If you want to take code from private repos, just authenticate with your GitHub 
 
 ### OMG, That's awesome!
 
-No, it's **That's The Way You Do It** :sunglasses:
+No, **That's The Way You Do It** :sunglasses:
 
 ## Running
 
