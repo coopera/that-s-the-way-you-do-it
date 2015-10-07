@@ -6,8 +6,10 @@
       <h1> <%= @doc.title %> </h1>
     </div>
     <div class="col-md-1">
-      <%= link_to docs_path(author: @doc.user) do %>
-        <%= image_tag @doc.user.avatar, class: 'doc-show-avatar' %>
+      <% if @doc.user %>
+        <%= link_to docs_path(author: @doc.user) do %>
+          <%= image_tag @doc.user.avatar, class: 'doc-show-avatar' %>
+        <% end %>
       <% end %>
     </div>
   </div>
