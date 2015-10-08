@@ -40,15 +40,15 @@ Simple:
 Types of links that are supported at the moment:
 
 - A file:
-  - https://github.com/IgorMarques/that-s-the-way-you-do-it/blob/master/app/models/doc.rb
+  - https://github.com/coopera/that-s-the-way-you-do-it/blob/master/app/models/doc.rb
 - Line interval from a file:
-  - https://github.com/IgorMarques/that-s-the-way-you-do-it/blob/master/app/models/doc.rb#L5-L7
+  - https://github.com/coopera/that-s-the-way-you-do-it/blob/master/app/models/doc.rb#L5-L7
 - A line from a file:
-  - https://github.com/IgorMarques/that-s-the-way-you-do-it/blob/master/app/models/doc.rb#L1
+  - https://github.com/coopera/that-s-the-way-you-do-it/blob/master/app/models/doc.rb#L1
 - A commit:
-  - https://github.com/IgorMarques/that-s-the-way-you-do-it/commit/d7f365db9777b4cb6e1c5799a2e431c58aaf3a19
+  - https://github.com/coopera/that-s-the-way-you-do-it/commit/d7f365db9777b4cb6e1c5799a2e431c58aaf3a19
 - A pull request
-  - https://github.com/IgorMarques/that-s-the-way-you-do-it/pull/7
+  - https://github.com/coopera/that-s-the-way-you-do-it/pull/7
 
 Types of links that are *expected* to be supported (someday):
 
