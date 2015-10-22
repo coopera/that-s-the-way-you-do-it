@@ -7,6 +7,12 @@
 
 **Money For Nothing - Dire Straits**
 
+Check out this awesome trailer/ demo!
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=FwQW4TzelFw
+" target="_blank"><img src="http://img.youtube.com/vi/FwQW4TzelFw/0.jpg" 
+alt="youtube trailer" width="400" height="300" border="10" /></a>
+
 **That's The Way You Do It** is a tutorials catalog for software development teams.
 
 Are you tired of repeating the same explanations over and over for your interns? Solved a bug that you couldn't find the answer anywhere on Stack Overflow? Found an awesome way to code a feature? Show to your team: "hey, **That's The Way You Do It**!"
