@@ -9,8 +9,8 @@
 
 Check out this awesome trailer/ demo!
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=CnR7QDZOcWk
-" target="_blank"><img src="http://img.youtube.com/vi/CnR7QDZOcWk/0.jpg" 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=FwQW4TzelFw
+" target="_blank"><img src="http://img.youtube.com/vi/FwQW4TzelFw/0.jpg" 
 alt="youtube trailer" width="400" height="300" border="10" /></a>
 
 **That's The Way You Do It** is a tutorials catalog for software development teams.
