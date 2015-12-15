@@ -15,7 +15,7 @@ alt="youtube trailer" width="400" height="300" border="10" /></a>
 
 And check the app live here:
 
-http://twydi-dev-colaborativo.herokuapp.com
+http://that-s-the-way-you-do-it.herokuapp.com
 
 **That's The Way You Do It** is a tutorials catalog for software development teams.
 
