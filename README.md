@@ -88,3 +88,7 @@ Remember:
 Found any bugs? Have any suggestion? Just create an issue or send me an e-mail.
 
 Cheers! :beers:
+
+## License
+
+This software is under [GNU GENERAL PUBLIC LICENSE](https://github.com/coopera/that-s-the-way-you-do-it/blob/master/LICENSE.md)
