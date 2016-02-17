@@ -170,6 +170,7 @@ GEM
       i18n
       polyamorous (~> 1.2)
     rdoc (4.2.0)
+    recaptcha (0.4.0)
     redcarpet (3.3.2)
     rspec-core (3.3.2)
       rspec-support (~> 3.3.0)
@@ -253,6 +254,7 @@ DEPENDENCIES
   rails_serve_static_assets
   rails_stdout_logging
   ransack
+  recaptcha
   redcarpet
   rspec-rails
   sass-rails (~> 5.0)

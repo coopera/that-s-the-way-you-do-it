@@ -58,6 +58,8 @@ gem 'font-awesome-sass', '~> 4.4.0'
 
 gem 'friendly_id', '~> 5.1.0'
 
+gem "recaptcha", require: "recaptcha/rails"
+
 group :development, :test do
 
   gem 'sqlite3'

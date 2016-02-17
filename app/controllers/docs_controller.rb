@@ -33,7 +33,7 @@ class DocsController < ApplicationController
     @doc.user = current_user if current_user
 
     respond_to do |format|
-      if @doc.save
+      if verify_recaptcha(model: @doc) && @doc.save
         respond_with_success(format, t('doc_created_success'))
       else
         respond_with_unprocessable_entity(format, :new)

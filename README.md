@@ -10,7 +10,7 @@
 Check out this awesome trailer/ demo!
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=FwQW4TzelFw
-" target="_blank"><img src="http://img.youtube.com/vi/FwQW4TzelFw/0.jpg" 
+" target="_blank"><img src="http://img.youtube.com/vi/FwQW4TzelFw/0.jpg"
 alt="youtube trailer" width="400" height="300" border="10" /></a>
 
 And check the app live here:
@@ -73,11 +73,19 @@ No, **That's The Way You Do It** :sunglasses:
 
 ## Running
 
+Remember to change your .env file to run local and set the proper variables at your production environment.
+
 Create a new app here:
 
 https://github.com/settings/applications/new
 
 And copy the ID and secret of the app and paste them at your .env file.
+
+Obtain a recaptcha key and secret API here:
+
+https://www.google.com/recaptcha/admin
+
+
 
 Remember:
 
